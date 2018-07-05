@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view2</title>
+</head>
+<body>
+
+<h1>{$title}</h1>
+<p>{$content}</p>
+<p>GET参数的使用：{$name}</p>
+<p>GET参数的使用：$_GET['name']={$smarty.get.name}</p>
+<p>POST参数的使用：$_POST['name']={$smarty.post.name2}</p>
+<p>常量使用：PI={$smarty.const.PI}</p>
+<h3>常见保留字符</h3>
+<p>{$smarty.version}</p>
+<p>{$smarty.now}</p>
+<p>{$smarty.template}</p>
+<p>{$smarty.current_dir}</p>
+<p>{$smarty.ldelim}</p>
+<p>{$smarty.rdelim}</p>
+
+
+</body>
+</html>

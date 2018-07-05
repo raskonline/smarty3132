@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{config_load file="site.conf"}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view3</title>
+</head>
+<body>
+
+<h1>{$title}</h1>
+<p>{$content}</p>
+<p>{#TEL#}</p>
+<p>{#ADDRESS#}</p>
+<p>{#CONTACT#}</p>
+<hr>
+<h3>另外一种读取配置文件方式</h3>
+<p>{$smarty.config.TEL}</p>
+<p>{$smarty.config.ADDRESS}</p>
+<p>{$smarty.config.CONTACT}</p>
+<hr>
+<h3>注意数字问题</h3>
+<p>{#ACCOUNT#}</p>
+
+
+
+</body>
+</html>
