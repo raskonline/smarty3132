@@ -13,8 +13,9 @@ $smarty->setTemplateDir("./views/");
 $smarty->setCompileDir("./views_c/");
 
 //传值
-$smarty->assign("title","白头吟");
-$smarty->assign("content","愿得一人心，白首不分离！");
+$smarty->assign("title","狼文化");
+$smarty->assign("content","学习的，是狼的耐性，不是野性。");
+
 
 
 //生成混编文件

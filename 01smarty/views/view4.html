@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{config_load file="site.conf"}
+<!--{config_load file="style.conf" section="two"}-->
+{config_load file="style.conf" section=$smarty.get.color}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view3</title>
+    <style type="text/css">
+        /*literal标识符中的内容不被解析*/
+        {literal}
+        body{
+            background-color: {#BGCOLOR#} ;
+        }
+        {/literal}
+        p {
+            background-color: {#BGCOLOR#} ;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>{$title}</h1>
+<p>{$content}</p>
+<p>{#TEL#}</p>
+<p>{#ADDRESS#}</p>
+<p>{#CONTACT#}</p>
+
+
+</body>
+</html>

@@ -1,4 +1,6 @@
 <?php
+//CSS样式使用配置文件
+
 //引入smarty类
 require "libs/Smarty.class.php";
 
@@ -13,11 +15,8 @@ $smarty->setCompileDir("./views_c/");
 //传值
 $smarty->assign("title","狼文化");
 $smarty->assign("content","学习的，是狼的耐性，不是野性。");
-$smarty->assign("name",$_GET['name']);
 
-//常量也是全局常量
-define("PI",3.1415926);
 
 
 //生成混编文件
-$smarty->display("view2.html");
+$smarty->display("view4.html");

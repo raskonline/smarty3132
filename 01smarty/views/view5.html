@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{config_load file="site.conf"}
+{config_load file="style.conf" section="one"}
+<!--{config_load file="style.conf" section=$smarty.get.color}-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view3</title>
+    <style type="text/css">
+        /*literal标识符中的内容不被解析*/
+        {literal}
+        body{
+            background-color: {#BGCOLOR#} ;
+        }
+        {/literal}
+        p {
+            background-color: {#BGCOLOR#} ;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>{$title}</h1>
+<p>{$content}</p>
+<h3>索引数组</h3>
+<p>{$list[0]}</p>
+<p>{$list[1]}</p>
+<p>{$list[2]}</p>
+<hr>
+<h3>关联数组</h3>
+<p>{$kvlist['boss']}</p>
+<p>{$kvlist['CTO']}</p>
+<p>{$kvlist['CFO']}</p>
+<h3>多维数组</h3>
+<p>{$mkvlist['coms']['xm']}</p>
+<p>{$mkvlist['coms']['fz']}</p>
+<p>{$mkvlist['coms']['pk']}</p>
+
+<h3>一维数组的遍历</h3>
+{foreach $listnull as $item}
+   <a href="#">{$item}</a>
+{foreachelse}
+   <h4>数组没有数据</h4>
+{/foreach}
+
+<h3>二维数组的遍历</h3>
+{foreach $kvlist as $key=> $item}
+<a href="#">{$key}>>>{$item}>>>{$item@iteration}</a>
+{foreachelse}
+<h4>数组没有数据</h4>
+{/foreach}
+
+
+
+</body>
+</html>
