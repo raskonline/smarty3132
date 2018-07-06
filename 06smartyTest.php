@@ -1,5 +1,5 @@
 <?php
-//渲染元素
+//smarty渲染元素
 
 //引入smarty类
 require "libs/Smarty.class.php";

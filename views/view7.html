@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view7</title>
+</head>
+<body>
+<!--{if $a==1}-->
+<!--<h1>标题1</h1>-->
+<!--{elseif $a==2}-->
+<!--<h1>标题2</h1>-->
+<!--{else}-->
+<!--<h1>bye</h1>-->
+<!--{/if}-->
+
+<!--使用保留变量-->
+<!--{if $smarty.get.a==1}-->
+<!--<h1>标题1</h1>-->
+<!--{elseif $smarty.get.a==2}-->
+<!--<h1>标题2</h1>-->
+<!--{else}-->
+<!--<h1>bye</h1>-->
+<!--{/if}-->
+<hr>
+<h3>数组和条件判断的结合</h3>
+<ul>
+{foreach $fruits as $k=>$v}
+    <li>
+        {if $v@iteration == 1}
+        <a href="#">{$v}</a>
+        {elseif $v@last}
+        <h3>{$v}</h3>
+        {else}
+        <em>{$v}</em>
+        {/if}
+    </li>
+{foreachelse}
+    <h1>读取数据失败</h1>
+{/foreach}
+</ul>
+</body>
+</html>
