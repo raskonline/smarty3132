@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view3</title>
+</head>
+<body>
+
+<!--复选框-->
+<h3>爱好</h3>
+<!--<input type="checkbox" name="hobby[]" value="read">阅读<br>-->
+<!--<input type="checkbox" name="hobby[]" value="sport">运动<br>-->
+<!--<input type="checkbox" name="hobby[]" value="music">音乐<br>-->
+
+{html_checkboxes name="hobby" options=$hobby selected=$mcval separator="====" label_ids=true}
+<h3>城市</h3>
+{html_options name='city' options=$city selected=$cityval}
+
+<h3>性别</h3>
+{html_radios name='gender' options=$gender checked=$genderval}
+
+
+</body>
+</html>
