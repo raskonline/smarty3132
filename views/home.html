@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板的覆盖</title>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        #head, #main, #footer {
+            width: 800px;
+            margin: 0 auto;
+        }
+        #head{
+            height: 60px;
+            background-color: antiquewhite;
+        }
+        #main{
+            height: 400px;
+            background-color: #f0c040;
+        }
+        #left{
+            width: 200px;
+            height: 400px;
+            float: left;
+        }
+        #right{
+            width: 600px;
+            height: 400px;
+            float: right;
+        }
+        #footer{
+            height: 60px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+<div id="head">
+    <a href="?a=1">首页</a>
+    <a href="?a=2">个人中心</a>
+</div>
+<div id="main">
+    {block name='main'}
+    <div id="left">
+        <ul>
+            <li>用户个人信息</li>
+            <li>用户充值信息</li>
+            <li>用户续费中心</li>
+            <li>用户缴费中心</li>
+        </ul>
+    </div>
+    <div id="right">
+        {block name='right'}{/block}
+    </div>
+    {/block}
+</div>
+<div id="footer">底部版权部分</div>
+</body>
+</html>
