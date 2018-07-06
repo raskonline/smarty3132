@@ -46,6 +46,7 @@
 
 <h3>二维数组的遍历</h3>
 {foreach $kvlist as $key=> $item}
+<!--通过@iteration实现计数功能-->
 <a href="#">{$key}>>>{$item}>>>{$item@iteration}</a>
 {foreachelse}
 <h4>数组没有数据</h4>
